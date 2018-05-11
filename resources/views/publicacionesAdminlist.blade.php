@@ -1,24 +1,8 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Dashboard Template for Bootstrap</title>
-     <link href="css/app.css" rel="stylesheet">
-    <link href="css/publicacionesAdminlist.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
-  </head>
-
-  <body>
-    <div class="container">
+@extends('dashboard')
+@section('content')
+    <div class="container-fluid">
       <div class="row">
-        <h4 class="pull-left">Bootstrap Snipp for Datatable</h4>
+        <h2 class="sub-header">Listado de anuncios</h2>
           <a class="btn icon-btn btn-success pull-right" href="#" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Nuevo</a>
         <div class="col-md-12">
           <div class="table-responsive">
@@ -316,16 +300,21 @@
         </div> 
       </div>
     </div>
-  </body>
+@endsection
+@section('stylesheet')
+  <link href="css/publicacionesAdminlist.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+@endsection
+@section('scripts')
   <script src="/js/app.js"></script>
   <script src="{{ asset('js/jquery-ui.js') }}"></script>
   <script src="/js/publicacionesAdminlist.js"></script>
   <script type="text/javascript">
-var nextinput = 0;
-function AgregarCampos(){
-nextinput++;
-campo = '<li id="rut'+nextinput+'">Campo:<input type="file" size="20" id="campo' + nextinput + '"&nbsp; name="campo' + nextinput + '"&nbsp; /></li>';
-$("#campos").append(campo);
-}
-</script>
-</html>
+    var nextinput = 0;
+    function AgregarCampos(){
+    nextinput++;
+    campo = '<li id="rut'+nextinput+'">Campo:<input type="file" size="20" id="campo' + nextinput + '"&nbsp; name="campo' + nextinput + '"&nbsp; /></li>';
+    $("#campos").append(campo);
+    }
+  </script>
+@endsection

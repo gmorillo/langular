@@ -16,8 +16,17 @@ Route::get('/', function () {
 });
 
 Route::get('dashboard', function () {
-    return view('dashboard');
+    return view('admin.pendientes-por-publicar');
 });
+
+Route::get('pendientes-por-publicar', function () {
+    return view('admin.pendientes-por-publicar');
+});
+
+Route::get('estado-pago-publicaciones', function () {
+    return view('admin.estado-pago-publicaciones');
+});
+
 
 Route::get('publicacionesAdminlist', function () {
     return view('publicacionesAdminlist');
