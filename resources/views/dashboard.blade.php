@@ -88,7 +88,7 @@
 		          	</div>
 		          	<h2 class="sub-header">Section title</h2>
 		          	<div class="table-responsive">
-			            <table class="table table-striped">
+			            <table class="table table-striped table-filter">
 			              	<thead>
 			                	<tr>
 			                  		<th>#</th>
@@ -265,40 +265,19 @@
 			              	</tbody>
 			            </table>
 		          	</div>
-		        </div>
-	      	</div>
-	    </div>   
-  	</body>
-	<script src="/js/app.js"></script>
-</html>
-
-
-
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<div class="container">
-	<div class="row">
-
-		<section class="content">
-			<h1>Table Filter</h1>
-			<div class="col-md-8 col-md-offset-2">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-success btn-filter" data-target="pagado">Pagado</button>
-								<button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
-								<button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelado</button>
-								<button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
+		          	<h2 class="sub-header">Section title 2</h2>
+		          	<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="pull-right">
+								<div class="btn-group">
+									<button type="button" class="btn btn-success btn-filter" data-target="pagado">Pagado</button>
+									<button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Pendiente</button>
+									<button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Cancelado</button>
+									<button type="button" class="btn btn-default btn-filter" data-target="all">Todos</button>
+								</div>
 							</div>
-						</div>
-						<div class="table-container">
-							<table class="table table-filter">
-								<tbody>
+							<div class="table-container">
+								<table class="table table-filter">
 									<tr data-status="pagado">
 										<td>
 											<div class="ckbox">
@@ -439,19 +418,15 @@
 											</div>
 										</td>
 									</tr>
-								</tbody>
-							</table>
+								</table>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="content-footer">
-					<p>
-						Page © - 2016 <br>
-						Powered By <a href="https://www.facebook.com/tavo.qiqe.lucero" target="_blank">TavoQiqe</a>
-					</p>
-				</div>
-			</div>
-		</section>
-		
-	</div>
-</div>
+		        </div>
+	      	</div>
+	    </div>   
+  	</body>
+	<script src="/js/app.js"></script>
+</html>
+
+

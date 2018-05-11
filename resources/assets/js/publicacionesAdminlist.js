@@ -37,3 +37,4 @@ function readImage() {
         console.log('Browser not support');
     }
 }
+
