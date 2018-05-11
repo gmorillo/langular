@@ -11,6 +11,7 @@
     <title>Dashboard Template for Bootstrap</title>
      <link href="css/app.css" rel="stylesheet">
     <link href="css/publicacionesAdminlist.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
   </head>
 
@@ -280,8 +281,25 @@
                 <textarea rows="8" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
               </div>
               <div class="form-group col-lg-12">
-                <label for="categoria">Imágenes</label>
-                <input type="file">
+                <div class="row">
+                                            <h4 class="info-text"> Drop us a small description.</h4>
+                                            <fieldset class="form-group">
+                                                <a href="javascript:void(0)" onclick="$('#pro-image').click()">Upload Image</a>
+                                                <input type="file" id="pro-image" name="pro-image" style="display: none;" class="form-control" multiple>
+                                            </fieldset>
+                                            <div class="preview-images-zone">
+                                            </div>
+                                            <!--<fieldset class="form-group">
+                            
+                          <a href="#" onclick="AgregarCampos();"> + Agregar Campos</a>
+                          <div id="campos"></div>
+                        
+                            <input type="file" id="pro-image" name="pro-image" style="display: none;" class="form-control" >
+                        </fieldset>
+                        <div class="preview-images-zone"></div>-->
+
+
+                                        </div>
               </div>
             </div>
             <div class="modal-footer ">
@@ -311,4 +329,14 @@
     </div>
   </body>
   <script src="/js/app.js"></script>
+  <script src="{{ asset('js/jquery-ui.js') }}"></script>
+  <script src="/js/publicacionesAdminlist.js"></script>
+  <script type="text/javascript">
+var nextinput = 0;
+function AgregarCampos(){
+nextinput++;
+campo = '<li id="rut'+nextinput+'">Campo:<input type="file" size="20" id="campo' + nextinput + '"&nbsp; name="campo' + nextinput + '"&nbsp; /></li>';
+$("#campos").append(campo);
+}
+</script>
 </html>
